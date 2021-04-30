@@ -1,0 +1,11 @@
+name = "my-blog"
+type = 'webpack'
+account_id = 'fa090cda6cb5cc39f3125664cf499831'
+usage_model = ''
+workers_dev = true
+target_type = "webpack"
+site = {bucket = "./public",entry-point = "workers-site"}
+
+[env.production]
+zone_id = '664267a2da720a82d1d21dc69c5b0ca8'
+route = '*huzuzhi.com/*'
