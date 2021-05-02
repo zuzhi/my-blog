@@ -28,9 +28,17 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'      
-      # Setup Leiningen
-      - name: Install clojure tools
+          java-version: '11'
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      # Install Sass
+      - name: Install Sass
+        run: npm install
+      # Install Leiningen
+      - name: Install Leiningen
         uses: DeLaGuardo/setup-clojure@3.2
         with:
           lein: 'latest'
