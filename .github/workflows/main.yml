@@ -36,7 +36,7 @@ jobs:
           node-version: '14'
       # Install Sass
       - name: Install Sass
-        run: npm install
+        run: npm install -g sass
       # Install Leiningen
       - name: Install Leiningen
         uses: DeLaGuardo/setup-clojure@3.2
