@@ -1,0 +1,25 @@
+{% extends "/html/base.html" %}
+{% block content %}
+<div id="post-list">
+    {% for post in posts %}
+    <div class="post-header">
+        <h4 style="padding: 0px 20px 20px; font-weight: normal; margin: 0px;"><a href="{{post.uri}}">{{post.title}}</a></h4>
+        <div class="post-meta">
+            {% if post.author %}
+            <div class="author">{{post.author}}</div>
+            {% endif %}
+        </div>
+    </div>
+    {{post.content|safe}}
+    {% endfor %}
+
+    <div id="prev-next">
+        {% if prev-uri %}
+        <a class="prev" href="{{prev-uri}}">&laquo; Prev</a>
+        {% endif %}
+        {% if next-uri %}
+        <a class="next" href="{{next-uri}}">Next &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

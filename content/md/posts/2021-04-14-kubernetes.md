@@ -12,7 +12,7 @@ Docker Compose 能将*服务*和其依赖作为一个整体单元来部署和取
 想要可靠的部署*服务*, 就需要上 Docker 编排框架(Docker orchestration framework)了. 比如 **Kubernetes**.
 
 	可靠是什么？
-	会具体表现为一些特性, 包括滚动升级, 回滚部署, 零停机部署等等.
+	可靠会具体表现为一些特性, 包括滚动升级, 回滚部署, 零停机部署等等.
 	另外, 稳定的服务也需要能够根据负载的变化动态调整节点数量.
 
 ...
@@ -63,3 +63,12 @@ Kubernetes = Master + Node
 
 - [Microservices Patterns, Chris Richardson](https://microservices.io/book)
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+
+## 草稿
+
+### 安装 kubectl
+
+```bash
+$ brew install kubectl
+```
+
