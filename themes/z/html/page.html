@@ -18,9 +18,5 @@
     {% if page.toc %}{{page.toc|safe}}{% endif %}
     {{page.content|safe}}
 
-    {% with prev=page.prev next=page.next%}
-    {% include "/html/prev-next.html" %}
-    {% endwith %}
-
 </div>
 {% endblock %}
