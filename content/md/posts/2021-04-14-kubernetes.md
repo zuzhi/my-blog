@@ -55,9 +55,7 @@ Kubernetes = Master + Node
 
 ### What's Next?
 
-示例应用并不能..., 现实情况是, 你有一个稳定运行的单体服务, 虽然它在开发, 测试和部署方面都还算简单, 但是
-有一些问题亟待解决, 如何从单体应用过渡到微服务, 这是一个非常大的话题, 后续文章我们将从DevOps和微服务架构
-两方面来讨论.
+示例应用并不能..., 现实情况是, 你有一个稳定运行的单体服务, 虽然它在开发, 测试和部署方面都还算简单, 但是有一些问题亟待解决, 如何从单体应用过渡到微服务, 这是一个非常大的话题, 后续文章我们将从DevOps和微服务架构两方面来讨论.
 
 ### 参考
 
@@ -66,9 +64,41 @@ Kubernetes = Master + Node
 
 ## 草稿
 
+
+### Docker Demo
+
+```
+mkdir docker-demo && cd docker-demo
+mkdir html
+echo '<h1>Hello Docker!</h1>' > html/index.html
+touch Dockerfile
+// FROM nginx
+// COPY html/* /usr/share/nginx/html
+docker build -t docker-demo:0.1 .
+docker images | grep demo
+docker run --name docker-demo -d -p 8080:80 docker-demo:0.1
+docker ps
+// Go to http://localhost:8080
+docker rm -f docker-demo
+```
+
+
 ### 安装 kubectl
 
 ```bash
 $ brew install kubectl
 ```
 
+kubectl 是 Kubernetes 的命令行工具, 可以用来对 Kubernetes 集群进行操作，比如: 部署应用，检查和管理集群资源以及查看日志。
+
+
+### 选择一种本地运行 Kubernetes 的方案, Kind vs. MiniKube vs. Kubeadm vs. K3S
+
+
+Kind vs. MiniKube vs. Kubeadm vs. K3S, kubernetes.io 给出了前三种的介绍和链接，了解下来最符合 Kubernetes 也是最复杂的是 Kubeadm.
+
+..., 我选择 Kubeadm.
+
+### 安装 Kubeadm
+
+...
