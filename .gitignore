@@ -15,3 +15,5 @@ pom.xml.asc
 .cpcache/
 workers-site*
 dist/
+/themes/z/css/*.css
+/themes/z/css/*.css.map

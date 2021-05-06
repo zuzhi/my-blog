@@ -1,11 +1,9 @@
-$fonts-sans-serif: Roboto, Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans CJK", sans-serif;
-$fonts-serif: Spectral, Georgia, "Times New Roman", PMingLiu, STSong, SimSun, "WenQuanYi Bitmap Song", "Noto Serif CJK", serif;
-$fonts-monospace: JetBrainsMono, "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", Courier, monospace;
+$fonts-post: Spectral, Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
 
 #post {
-  font-family: $fonts-sans-serif;
+  font-family: $fonts-post;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: $fonts-serif;
+  font-family: $fonts-post;
 }
