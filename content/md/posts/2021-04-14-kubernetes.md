@@ -67,7 +67,7 @@ Kubernetes = Master + Node
 
 ### Docker Demo
 
-```
+```bash
 mkdir docker-demo && cd docker-demo
 mkdir html
 echo '<h1>Hello Docker!</h1>' > html/index.html
@@ -86,19 +86,24 @@ docker rm -f docker-demo
 ### 安装 kubectl
 
 ```bash
-$ brew install kubectl
+brew install kubectl
 ```
 
 kubectl 是 Kubernetes 的命令行工具, 可以用来对 Kubernetes 集群进行操作，比如: 部署应用，检查和管理集群资源以及查看日志。
 
 
-### 选择一种本地运行 Kubernetes 的方案, Kind vs. MiniKube vs. Kubeadm vs. K3S
+### Bare Metal
 
+本地运行 Kubernetes 的方案有很多种, Kind, MiniKube, Kubeadm 和 K3S 等等.
 
-Kind vs. MiniKube vs. Kubeadm vs. K3S, kubernetes.io 给出了前三种的介绍和链接，了解下来最符合 Kubernetes 也是最复杂的是 Kubeadm.
+kubernetes.io 给出了前三种的介绍和链接，了解下来最符合 Kubernetes 也是最复杂的是 Kubeadm.
 
-..., 我选择 Kubeadm.
+为了更贴近生产环境的体验, 这里我选择了 Kubeadm.
 
-### 安装 Kubeadm
+#### 安装 Kubeadm
+
+...
+
+### Cloud
 
 ...
