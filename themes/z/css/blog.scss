@@ -27,3 +27,10 @@ header a:hover, a:active {
 #posts {
     padding-left: 20px;
 }
+
+*:not(pre)>code {
+    display: inline;
+    padding: 0.2em 0.4em;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+}

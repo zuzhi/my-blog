@@ -11,9 +11,8 @@ Docker Compose 能将*服务*和其依赖作为一个整体单元来部署和取
 
 想要可靠的部署*服务*, 就需要上 Docker 编排框架(Docker orchestration framework)了. 比如 **Kubernetes**.
 
-	可靠是什么？
-	可靠会具体表现为一些特性, 包括滚动升级, 回滚部署, 零停机部署等等.
-	另外, 稳定的服务也需要能够根据负载的变化动态调整节点数量.
+> 可靠是什么？<br>
+> 可靠会具体表现为一些特性, 包括滚动升级, 回滚部署, 另外, 稳定的服务也需要能够根据负载的变化动态调整节点数量.
 
 ...
 
@@ -67,26 +66,26 @@ Kubernetes = Master + Node
 
 ### Docker Demo
 
-```bash
-mkdir docker-demo && cd docker-demo
-mkdir html
-echo '<h1>Hello Docker!</h1>' > html/index.html
-touch Dockerfile
+```language-shell
+$ mkdir docker-demo && cd docker-demo
+$ mkdir html
+$ echo '<h1>Hello Docker!</h1>' > html/index.html
+$ touch Dockerfile
 // FROM nginx
 // COPY html/* /usr/share/nginx/html
-docker build -t docker-demo:0.1 .
-docker images | grep demo
-docker run --name docker-demo -d -p 8080:80 docker-demo:0.1
-docker ps
+$ docker build -t docker-demo:0.1 .
+$ docker images | grep demo
+$ docker run --name docker-demo -d -p 8080:80 docker-demo:0.1
+$ docker ps
 // Go to http://localhost:8080
-docker rm -f docker-demo
+$ docker rm -f docker-demo
 ```
 
 
 ### 安装 kubectl
 
-```bash
-brew install kubectl
+```language-shell
+$ brew install kubectl
 ```
 
 kubectl 是 Kubernetes 的命令行工具, 可以用来对 Kubernetes 集群进行操作，比如: 部署应用，检查和管理集群资源以及查看日志。
