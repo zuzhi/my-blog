@@ -16,11 +16,46 @@
 
 至于要真正**从容自信**的使用 Emacs，除了上面说的这些，恐怕真的需要好好梳理总结一下使用 Sublime Text 时涉及的操作，然后做到使用 Emacs 能做相同的事了。
 
+## I. 写文章
+
+| Action     | Sublime Text   | Emacs       | 与 ST 相比 Emacs 是否易用 |
+| ---------- | -------------- | ----------- | ----------------------- |
+| 打开文件夹   | `C-o`          | `C-x d`     |  Same                  |
+| 侧栏显示目录 | 显示            | 无          |  No                    |
+| 跳转到文件  | `C-p`, `C-n/p`  | `C-x C-f`   |  No                    |
+
+
+**Emacs 的问题**
+
+跳转文件不方便
+
+**优化**
+
+已经一番搜索调研，`Projectile` + `Ivy` 应该能满足相同的需求，`Projectile` 的主要特性有：
+
+- jump to a file in project
+- jump to a project buffer
+- ...
+- jump to recently visited files in the project
+- switch between projects you have worked on
+- ...
+- grep (search) in project
+- run shell commands in a project (e.g. make, lein)
+- support for multiple minibuffer completion/selection libraries (ido, ivy, helm and the default completion system)
+
+`Projectile` 提供跳转到项目文件，按项目管理文件夹，项目之间切换等功能，另外，它还支持像 `ivy` 这样的补全/选择库。
+
+Ivy 是一个补全/选择库，它会展示一个候选结果列表，这样能很好地辅助快速查找到文件。
+
+按照对应官网的配置将 `Projectile` 和 `Ivy` 配置好之后，使用 `S-p f` 打开目录下任一文件，项目目录就被 `Projectile` 收藏了，后面通过 `S-p f` 就能快速打开工作目录以及搜索文件了。
+
+不过 ivy 默认没有开启对 fuzzy search 的支持，通过[这个方法](https://oremacs.com/2016/01/06/ivy-flx/)修改以支持 fuzzy fearch.
 
 <br><br><br>
 
 ---
 
-<span style="color:#777">
+<small style="color:#777">
 [1]: 因为这些命令在 macOS 系统的大部分应用里都可以使用，我每天都在用，可以说已经形成肌肉记忆了。
-</span>
+</small>
+
