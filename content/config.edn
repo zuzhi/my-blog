@@ -20,8 +20,8 @@
  :theme                        "zima"
  :resources                    ["img"]
  :keep-files                   [".git"]
- :disqus?                      false
- :disqus-shortname             ""
+ :disqus?                      true
+ :disqus-shortname             "zuzhi"
  :ignored-files                [#"\.#.*" #".*\.swp$"]
  :previews?                    true
  :posts-per-page               10000
