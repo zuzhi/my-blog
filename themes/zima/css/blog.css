@@ -1,0 +1,27 @@
+header.app-header-container,
+article#main {
+  margin: 20px;
+}
+
+#post {
+  max-width: 580px;
+  line-height: 2em;
+}
+
+#post .post-header {
+  padding-top: 10px;
+}
+
+blockquote {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=blog.css.map */

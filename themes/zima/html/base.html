@@ -19,15 +19,19 @@
               href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
     </head>
     <body>
-        <header class="app-header-container" style="align-items: baseline; padding: 20px;"><h4 class="app-header-title" style="padding-right: 10px; margin: 0px; font-weight: 500;"><a href="/" style="color: inherit;">zuzhi</a><a href="https://github.com/zuzhi" style="padding-left: 1em;">github.com/zuzhi</a></h4></header>
+        <header class="app-header-container">
+            <h4 class="app-header-title">
+                <a href="/">zuzhi</a>
+                <a href="https://github.com/zuzhi">github.com/zuzhi</a>
+            </h4>
+        </header>
 
         <article id="main">
             {% block content %}
             {% endblock %}
         </article>
 
-        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script> -->
-	<script src="{{blog-prefix}}/js/highlight.pack.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
 
         {% if post.klipse %} {{post.klipse|safe}} {% endif %}

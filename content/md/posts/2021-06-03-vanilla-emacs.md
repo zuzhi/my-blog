@@ -9,23 +9,23 @@
 > 1. flavored with vanilla extract
 > 2. plain and without any extras or adornments
 
-Vanilla 作为形容词时，含义是1.香草味的或者2.平淡的无任何添加的。用在编程语言或软件的语境下通常表示原生的，例如 Vanilla JavaScript vs. jQuery/React. 本文中 Vanilla Emacs 就表示原生 Emacs，区别于 Doom Emacs 或者 Spaceemacs.
+Vanilla 作为形容词时，含义是1.香草味的，2.平淡的无任何添加的。用在编程语言或软件的语境下通常表示原生的，例如 Vanilla JavaScript vs. jQuery/React. 本文中 Vanilla Emacs 就表示原生 Emacs，区别于 Doom Emacs 或者 Spacemacs.
 
-这篇文章主要讲原生 Emacs 的使用和配置，由于本人目前还是 Emacs 初级，只会涉及相当基础的内容。
+这篇文章主要讲原生 Emacs 的使用和配置，介绍如何把 Emacs 当做普通文本编辑器使用。由于本人目前也还是 Emacs 初级，所以只会涉及相当基础的内容。
 
-具体一点，**使用**就是
+基础到什么程度呢？具体一点，**使用**就是
 
-- 编辑文件
-- 访问工程里的文件夹和文件
+- 打开 Emacs，打开文件，编辑文件，保存，退出
+- 以工程的方式管理文件夹和文件
 
 **配置**就是
 
 - 包管理与使用
-- 配置文件的修改
+- Emacs 配置文件的修改
 
 ## 安装
 
-对，这篇文章主要讲 Emacs 的使用和配置。
+Doom Emacs 的入门指南里有关于如何在 Linux, macOS, Windows 下安装 Emacs 的详细介绍，[链接](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#emacs--dependencies)。
 
 ## 使用
 
@@ -33,6 +33,7 @@ Vanilla 作为形容词时，含义是1.香草味的或者2.平淡的无任何�
 假设你已经安装了 Emacs.
 
 作为演示，我在 iPad 上通过 iSH<sup>[1]</sup> 安装了 Emacs 26.3<sup>[2]</sup>.
+
 
 ### 上手编辑文件
 

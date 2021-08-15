@@ -3,7 +3,9 @@
 <div id="post-list">
     {% for post in posts %}
     <div class="post-header">
-        <h4 style="padding: 0px 20px 20px; font-weight: normal; margin: 0px;"><a href="{{post.uri}}">{{post.title}}</a></h4>
+        <h4>
+            <a href="{{post.uri}}">{{post.title}}</a>
+        </h4>
         <div class="post-meta">
             {% if post.author %}
             <div class="author">{{post.author}}</div>
