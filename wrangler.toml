@@ -8,4 +8,4 @@ site = {bucket = "./public",entry-point = "workers-site"}
 
 [env.production]
 zone_id = '664267a2da720a82d1d21dc69c5b0ca8'
-route = '*huzuzhi.com/*'
+routes = ['huzuzhi.com/*', 'www.huzuzhi.com/*']
