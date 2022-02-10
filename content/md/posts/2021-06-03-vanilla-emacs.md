@@ -37,13 +37,13 @@ You may change this message by editing /etc/motd.
 
 ```
 
-![Enter file](../../img/vanilla-emacs/2-enter-file.PNG)
+![Enter file](../../img/vanilla-emacs/2-enter-file.png)
 
 文件第三行告诉我们可以通过修改 `/etc/motd` 来改变这个每次进入 iSH 都会看到的提示消息<sup>[3]</sup>，那正好我们就可以用 Emacs 来编辑这个文件。
 
 首先，输入 `emacs /etc/motd`，进入 Emacs，等待 motd 文件内容加载<sup>[4]</sup>。
 
-![Enter cmd](../../img/vanilla-emacs/1-enter-cmd.PNG)
+![Enter cmd](../../img/vanilla-emacs/1-enter-cmd.png)
 
 看到文件内容之后，就可以开始改了，这里我准备把内容改为 ~~hello, world~~ `happy hacking`.
 
@@ -58,11 +58,11 @@ A. 既然当普通编辑器使用，自然我们可以使用方向键把光标�
 B. 首先想到的是可以连续使用 `C-k`<sup>[5]</sup> 逐行删除
 
 C. 通过 Stack Overflow 我知道了还可以使用 `C-x h C-w`<sup>[6]</sup>
-![Select all](../../img/vanilla-emacs/3-c-x-h.PNG)
-![Kill region](../../img/vanilla-emacs/4-c-w.PNG)
+![Select all](../../img/vanilla-emacs/3-c-x-h.png)
+![Kill region](../../img/vanilla-emacs/4-c-w.png)
 
 D. 既然 `C-x h C-w` 可以，那么相同的原理，我想到了可以先使用 `C-SPC` 设置 Mark，然后移动光标选中所有内容（Region），最后使用 `C-w` 删除 Region<sup>[7]</sup><sup>[8]</sup>
-![Select region](../../img/vanilla-emacs/6-c-spc-region.PNG)
+![Select region](../../img/vanilla-emacs/6-c-spc-region.png)
 
 BCD 都是 Emacs 特有的操作，和 A 相比，最大的区别在于手不需要移动太多去找方向键，而且能更快速地执行完成。
 
@@ -72,7 +72,7 @@ A 也有可以提升的空间，使用 Emacs 的光标控制动作可以更快�
 
 #### 3. 退出并重新打开 iSH 就可以看到更新过的 motd 了
 
-![New motd](../../img/vanilla-emacs/7-new-motd.PNG)
+![New motd](../../img/vanilla-emacs/7-new-motd.png)
 
 ### 从 Emacs 中打开文件
 
@@ -80,7 +80,7 @@ A 也有可以提升的空间，使用 Emacs 的光标控制动作可以更快�
 
 重新打开 Emacs，我们会看到类似如下的欢迎界面，这被称为一个 buffer，buffer 的概念类似于一个标签页，后面会再说到。
 
-![*Gnu Emacs*](../../img/vanilla-emacs/8-gnu-emacs-buffer.PNG)
+![*Gnu Emacs*](../../img/vanilla-emacs/8-gnu-emacs-buffer.png)
 
 使用 `C-x C-f` 来查找要打开的文件，在出现的输入提示符里键入要打开的文件的路径，输入时可以使用 tab 键补全，这个输入区域是一个 MiniBuffer，在成功找到要编辑的文件时，按下回车打开文件。
 
@@ -92,7 +92,7 @@ A 也有可以提升的空间，使用 Emacs 的光标控制动作可以更快�
 
 假设我们还是要编辑 `/etc/motd` 但是我们在只输入 `/etc` 的时候就按下回车键，此时，由于要打开的是文件夹，所以我们会看到一个显示文件夹内容的 buffer，显示的内容类似于对文件夹执行了 `ls -l`。
 
-![dired on etc](../../img/vanilla-emacs/9-dired-etc.PNG)
+![dired on etc](../../img/vanilla-emacs/9-dired-etc.png)
 
 那么，要在这个 buffer 里怎么找到 `motd` 文件呢？
 
@@ -220,7 +220,7 @@ C. 使用 `C-s motd` 执行增量搜索，可以更快找到该文件
 6: https://stackoverflow.com/questions/12755367/how-to-clear-all-the-content-of-a-file-in-emacs, `C-x h` 和 `C-w` 也都可以从 [A Guided Tour of Emacs](https://www.gnu.org/software/emacs/tour/index.html) 的 Region 和 Killing ("cutting") text 部分查看该命令。
 
 7: `C-SPC` 在 iPad 上默认切换输入法，可以通过 iSH 来设置接收该命令。
-   ![Settings of C-SPC](../../img/vanilla-emacs/5-settings-c-spc.PNG)
+   ![Settings of C-SPC](../../img/vanilla-emacs/5-settings-c-spc.png)
 
 8: 如果想要把这几种方式都试一下，可以使用 `C-x u` 撤销更改后重试。
 </small>
