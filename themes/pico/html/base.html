@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{title}}{% block subtitle %}{% endblock %}</title>
+        <title>{% block subtitle %}{% endblock %}</title>
         {% block meta %}
         <meta name="description" content="{{description}}">
         <meta name="keywords" content="">
@@ -10,28 +10,29 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
         <link rel="shortcut icon" href="{{blog-prefix}}/img/z.png">
-        <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=block" rel="stylesheet"/>
+
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-        {% style "css/blog.css" %}
-        {% style "css/font.css" %}
         <link rel="stylesheet"
-              href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+              href="https://cdnjs.cloudflare.com/ajax/libs/picocss/1.5.3/pico.min.css"/>
+        {% style "css/blog.css" %}
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/nord.min.css"/>
     </head>
     <body>
-        <header class="app-header-container">
-            <h4 class="app-header-title">
+        <header class="container">
+            <h4>
                 <a href="/">zuzhi</a>
                 <a href="https://github.com/zuzhi">github.com/zuzhi</a>
             </h4>
         </header>
 
-        <article id="main">
+        <main class="container">
             {% block content %}
             {% endblock %}
-        </article>
+        </main>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
 
         {% if post.klipse %} {{post.klipse|safe}} {% endif %}

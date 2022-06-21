@@ -17,3 +17,5 @@ workers-site*
 dist/
 /themes/z/css/*.css
 /themes/z/css/*.css.map
+.clj-kondo/
+.lsp/

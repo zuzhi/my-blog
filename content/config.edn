@@ -1,13 +1,13 @@
 {:site-title                   "zuzhi"
  :author                       "zuzhi"
  :description                  "zuzhi 的博客"
- :site-url                     "http://huzuzhi.com/"
+ :site-url                     "http://huzuzhi.com"
  :post-root                    "posts"
  :page-root                    "pages"
- :post-root-uri                "posts-output"
- :page-root-uri                "pages-output"
- :tag-root-uri                 "tags-output"
- :author-root-uri              "authors-output"
+ :post-root-uri                ""
+ :page-root-uri                ""
+ :tag-root-uri                 "/tags"
+ :author-root-uri              "/authors"
  :public-dest                  "public"
  :blog-prefix                  ""
  :rss-name                     "feed.xml"
@@ -17,16 +17,16 @@
  :archive-group-format         "yyyy MMMM"
  :sass-src                     []
  :sass-path                    "sass"
- :theme                        "zima"
+ :theme                        "pico"
  :resources                    ["img"]
  :keep-files                   [".git"]
- :disqus?                      true
- :disqus-shortname             "zuzhi"
+ :disqus?                      false
+ :disqus-shortname             ""
  :ignored-files                [#"\.#.*" #".*\.swp$"]
  :previews?                    true
  :posts-per-page               10000
  :blocks-per-preview           0
- :clean-urls                   :trailing-slash
+ :clean-urls                   :no-trailing-slash
  :collapse-subdirs?            false
  :hide-future-posts?           true
  :klipse                       {:settings {:selector ".klipse-clj"}}

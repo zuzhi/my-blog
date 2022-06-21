@@ -1,9 +1,9 @@
 {:title "Vanilla Emacs"
  :layout :post
- :tags  ["emacs"]
- :toc false}
-
-<span style="color:red">**Draft**</span>
+ :tags ["emacs"]
+ :toc false
+ :draft true
+ :slug "vanilla-emacs"}
 
 > vanilla adj.
 > 1. flavored with vanilla extract
@@ -200,7 +200,8 @@ C. 使用 `C-s motd` 执行增量搜索，可以更快找到该文件
 
 ![Doom Emacs](https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png)
 
----
+
+#### Notes:
 
 <small style="color:#777">
 0: 当然了，Emacs 能做很多事，甚至可以说是“所有事”，甚至也可以玩俄罗斯方块。

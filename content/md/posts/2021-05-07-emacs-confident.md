@@ -1,8 +1,8 @@
 {:title "从容自信地使用 Emacs"
  :layout :post
- :tags  ["emacs"]}
-
-<span style="color:red">**Draft**</span>
+ :tags ["emacs"]
+ :draft true
+ :slug "emacs-confident"}
 
 由于 `Emacs` 有着相当陡峭的学习曲线，从我最早接触 Emacs 到现在的情况来看，要能够达到**会用 Emacs**依然需要非常漫长的时间。
 
@@ -51,11 +51,7 @@ Ivy 是一个补全/选择库，它会展示一个候选结果列表，这样能
 
 不过 ivy 默认没有开启对 fuzzy search 的支持，通过[这个方法](https://oremacs.com/2016/01/06/ivy-flx/)修改以支持 fuzzy fearch.
 
-<br><br><br>
 
----
-
-<small style="color:#777">
+#### Notes:
+ 
 [1]: 因为这些命令在 macOS 系统的大部分应用里都可以使用，我每天都在用，可以说已经形成肌肉记忆了。
-</small>
-

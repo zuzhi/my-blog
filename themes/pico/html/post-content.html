@@ -1,0 +1,7 @@
+<h1>{{post.title}}</h1>
+{% if post.draft %}
+<p><i>Draft</i></p>
+{% endif %}
+{% if post.toc %}{{post.toc|safe}}{% endif %}
+{{post.content|safe}}
+<br/>

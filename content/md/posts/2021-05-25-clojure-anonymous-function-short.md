@@ -1,7 +1,8 @@
 {:title "Clojure 匿名函数的简写形式"
  :layout :post
  :klipse true
- :tags  ["clojure"]}
+ :tags ["clojure"]
+ :slug "clojure-anonymous-function"}
 
 ```clojure
 (#(+ 1 %) 1)                       ; 返回 2
@@ -47,10 +48,8 @@ Clojure 匿名函数的标准写法是这样：
 (map #(* % %) (range 1 10))
 ```
 
-<br><br><br>
+#### Notes
 
----
-
-See Also:
-
-- [Learn Clojure - Functions](https://clojure.org/guides/learn/functions)
+<small style="color:#777">
+0: [Learn Clojure - Functions](https://clojure.org/guides/learn/functions)
+</small>

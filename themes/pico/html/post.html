@@ -1,5 +1,5 @@
 {% extends "/html/base.html" %}
-{%block subtitle %}: {{post.title}}{% endblock %}
+{%block subtitle %}{{post.title}}{% endblock %}
 {% block meta %}
 <meta name="keywords" content="{% for tag in tags %}{{tag.name}}{% if not forloop.last %},{% endif %}{% endfor %}">
 {% if post.description %}
@@ -12,16 +12,10 @@
 <meta property="og:type" content="article" />
 {% endblock %}
 {% block content %}
-<div id="post">
-    {% include "/html/post-content.html" %}
-    <div id="prev-next">
-        {% if post.prev %}
-        <a href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
-        {% endif %}
-        {% if post.next %}
-        <a class="right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
-        {% endif %}
-    </div>
+<div class="grid">
+    <section>
+        {% include "/html/post-content.html" %}
+    </section>
 
     {% if disqus-shortname %}
     <div id="disqus_thread"></div>
