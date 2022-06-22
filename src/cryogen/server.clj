@@ -15,12 +15,7 @@
 (defn init [fast?]
   (println "Init: fast compile enabled = " (boolean fast?))
   (load-plugins)
-  (compile-assets-timed
-   {:update-article-fn
-    (fn update-article [{:keys [slug] :as article} config]
-      (if slug
-        (assoc article :uri (str "/" slug))
-        article))})
+  (compile-assets-timed)
   (let [ignored-files (-> (resolve-config) :ignored-files)]
     (run!
       #(if fast?

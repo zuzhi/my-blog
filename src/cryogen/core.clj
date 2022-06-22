@@ -4,5 +4,10 @@
 
 (defn -main []
   (load-plugins)
-  (compile-assets-timed)
+  (compile-assets-timed
+   {:update-article-fn
+    (fn update-article [{:keys [slug] :as article} config]
+      (if slug
+        (assoc article :uri (str "/" slug))
+        article))})
   (System/exit 0))
