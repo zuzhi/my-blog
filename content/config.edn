@@ -1,7 +1,7 @@
 {:site-title                   "zuzhi"
  :author                       "zuzhi"
  :description                  "zuzhi 的博客"
- :site-url                     "http://huzuzhi.com"
+ :site-url                     "http://huzuzhi.com/"
  :post-root                    "posts"
  :page-root                    "pages"
  :post-root-uri                ""
