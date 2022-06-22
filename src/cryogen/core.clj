@@ -8,8 +8,6 @@
    {:update-article-fn
     (fn update-article [{:keys [slug] :as article} config]
       (if slug
-        (assoc article
-               :uri (str "/" slug)
-               :uri-html (str "/" slug ".html"))
+        (assoc article :uri (str "/" slug ".html"))
         article))})
   (System/exit 0))
