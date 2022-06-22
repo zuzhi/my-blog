@@ -4,7 +4,7 @@
     {% for post in posts %}
     <div class="post-header">
         <h4>
-            <a href="{{post.uri}}">{{post.title}}</a>
+            <a href="{{post.uri-html}}">{{post.title}}</a>
         </h4>
         <div class="post-meta">
             {% if post.author %}
