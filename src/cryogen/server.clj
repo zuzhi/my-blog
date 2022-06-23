@@ -26,7 +26,13 @@
     (run!
       #(if fast?
          (start-watcher-for-changes! % ignored-files compile-assets-timed {})
-         (start-watcher! % ignored-files compile-assets-timed))
+         (start-watcher! % ignored-files (fn [] (compile-assets-timed
+                                                 {:update-article-fn
+                                                  (fn update-article [{:keys [slug] :as article} config]
+                                                    (if slug
+                                                      (assoc article
+                                                             :uri (str "/" slug ".html"))
+                                                      article))}))))
       ["content" "themes"])))
 
 (defn wrap-subdirectories
