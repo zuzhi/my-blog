@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% block subtitle %}{% endblock %}</title>
+        <title>{% if not post.title %}{{title}}{% endif %}{% block subtitle %}{% endblock %}</title>
         {% block meta %}
         <meta name="description" content="{{description}}">
         <meta name="keywords" content="">
