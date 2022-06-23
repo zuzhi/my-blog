@@ -26,7 +26,7 @@
  :previews?                    true
  :posts-per-page               10000
  :blocks-per-preview           0
- :clean-urls                   :no-trailing-slash
+ :clean-urls                   :dirty
  :collapse-subdirs?            false
  :hide-future-posts?           true
  :klipse                       {:settings {:selector ".klipse-clj"}}
