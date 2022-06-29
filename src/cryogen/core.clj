@@ -2,7 +2,7 @@
   (:require [cryogen-core.compiler :refer [compile-assets-timed]]
             [cryogen-core.plugins :refer [load-plugins]]))
 
-(defn update-article [{:keys [hide slug] :as article} article]
+(defn update-article [{:keys [hide slug] :as article} config]
   (if hide
     nil
     (if slug
