@@ -3,7 +3,8 @@
  :tags ["docker", "microservices", "kubernetes"]
  :toc false
  :draft true
- :slug "kubernetes"}
+ :slug "kubernetes"
+ :hide true}
 
 使用*容器*(Container)部署*服务*(Service)是一种现代的部署*服务*的方式之一, 最基础的运行*容器*的方式是使用 `docker run` 命令, 但是这种方式是不可靠的, 虽然 Docker 引擎 也提供了一些基本的管理功能, 比如当*容器*故障或者当服务器重启时能自动重启*容器*, 但是这并不能处理机器故障的情况.
 

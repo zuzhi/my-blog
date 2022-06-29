@@ -2,7 +2,8 @@
  :layout :post
  :tags ["emacs"]
  :draft true
- :slug "emacs-confident"}
+ :slug "emacs-confident"
+ :hide true}
 
 由于 `Emacs` 有着相当陡峭的学习曲线，从我最早接触 Emacs 到现在的情况来看，要能够达到**会用 Emacs**依然需要非常漫长的时间。
 

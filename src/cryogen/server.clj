@@ -17,22 +17,32 @@
   (load-plugins)
   (compile-assets-timed
    {:update-article-fn
-    (fn update-article [{:keys [slug] :as article} config]
-      (if slug
-        (assoc article
-               :uri (str "/" slug ".html"))
-        article))})
+    (do
+      (fn update-article [{:keys [slug] :as article} config]
+        (if slug
+          (assoc article
+                 :uri (str "/" slug ".html"))
+          article))
+      (fn exclude-article [{:keys [hide] :as article} config]
+        (if hide
+          nil
+          article)))})
   (let [ignored-files (-> (resolve-config) :ignored-files)]
     (run!
       #(if fast?
          (start-watcher-for-changes! % ignored-files compile-assets-timed {})
          (start-watcher! % ignored-files (fn [] (compile-assets-timed
                                                  {:update-article-fn
-                                                  (fn update-article [{:keys [slug] :as article} config]
-                                                    (if slug
-                                                      (assoc article
-                                                             :uri (str "/" slug ".html"))
-                                                      article))}))))
+                                                  (do
+                                                    (fn update-article [{:keys [slug] :as article} config]
+                                                      (if slug
+                                                        (assoc article
+                                                               :uri (str "/" slug ".html"))
+                                                        article))
+                                                    (fn exclude-article [{:keys [hide] :as article} config]
+                                                      (if hide
+                                                        nil
+                                                        article)))}))))
       ["content" "themes"])))
 
 (defn wrap-subdirectories

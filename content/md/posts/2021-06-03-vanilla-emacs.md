@@ -3,7 +3,8 @@
  :tags ["emacs"]
  :toc false
  :draft true
- :slug "vanilla-emacs"}
+ :slug "vanilla-emacs"
+ :hide true}
 
 > vanilla adj.
 > 1. flavored with vanilla extract
