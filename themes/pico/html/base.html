@@ -32,7 +32,7 @@
             {% endblock %}
         </main>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="{{blog-prefix}}/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
 
         {% if post.klipse %} {{post.klipse|safe}} {% endif %}
