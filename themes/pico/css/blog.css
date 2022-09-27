@@ -6,9 +6,19 @@
 }
 
 /* Typography */
+h1,
 h2,
 h3,
+h4,
 hgroup > :last-child {
+  font-weight: 300;
+}
+
+h4 > #home {
+  color: grey;
+}
+
+p {
   font-weight: 200;
 }
 
