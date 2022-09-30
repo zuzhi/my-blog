@@ -15,7 +15,7 @@
 
 ## 标准写法
 
-Clojure 匿名函数的标准写法是：
+Clojure 匿名函数的标准写法[^1]是：
 
 ```clojure
 ;;    params         body
@@ -39,7 +39,7 @@ Clojure 匿名函数的标准写法是：
 
 其中 `%` 用于表示单个参数。多个参数使用 `%1`, `%2`, `%3` 并以此类推，`%&` 用来表示剩余参数。
 
-这个形式和函数调用非常像，看起来就像是函数调用前面加了个 `#` 号而已。因为这种相似性，你可以更快地了解匿名函数被调用时发生了什么。
+这个形式和函数调用非常像，看起来就像是函数调用前面加了个 `#` 号而已[^2]。因为这种相似性，你可以更快地了解匿名函数被调用时发生了什么。
 
 当然，由于是匿名函数，总是要在声明时调用的，也就回到最上面我们看到的调用形式了。
 
@@ -54,9 +54,7 @@ Clojure 匿名函数的标准写法是：
 ```
 
 
+## Notes
 
-#### Notes
-
-[1] [Learn Clojure - Functions - Anonymous Functions](https://clojure.org/guides/learn/functions#_anonymous_functions)
-
-[2] [Brave Clojure - Do Things - Anonymous Functions](https://www.braveclojure.com/do-things/#Anonymous_Functions)
+[^1]: [Learn Clojure - Functions - Anonymous Functions](https://clojure.org/guides/learn/functions#_anonymous_functions)
+[^2]: [Brave Clojure - Do Things - Anonymous Functions](https://www.braveclojure.com/do-things/#Anonymous_Functions)
