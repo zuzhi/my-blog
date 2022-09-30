@@ -6,20 +6,10 @@
 }
 
 /* Typography */
-h1,
 h2,
 h3,
-h4,
 hgroup > :last-child {
-  font-weight: 300;
-}
-
-h4 > #home {
-  color: grey;
-}
-
-p {
-  font-weight: 300;
+  font-weight: 200;
 }
 
 small {
@@ -72,4 +62,29 @@ aside img {
 aside p {
   margin-bottom: var(--spacing-company);
   line-height: 1.25;
+}
+
+/* customize */
+
+h1,
+h2,
+h3,
+h4,
+p,
+hgroup > :last-child {
+  font-weight: 300;
+}
+
+h4 > #home {
+  color: grey;
+}
+
+p {
+  line-height: 1.6;
+}
+
+code, kbd {
+  padding: 0.2em 0.4em;
+  font-size: .8em;
+  border-radius: 5px;
 }
