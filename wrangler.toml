@@ -1,9 +1,9 @@
 name = "my-blog"
-account_id = 'fa090cda6cb5cc39f3125664cf499831'
-usage_model = 'bundled'
-workers_dev = true
-site = {bucket = "./public"}
-main = "workers-site"
+main = "src/index.ts"
+compatibility_date = "2023-03-03"
+
+[site]
+bucket = "./public"
 
 [env.production]
 routes = ['huzuzhi.com/*', 'www.huzuzhi.com/*']

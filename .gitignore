@@ -19,3 +19,4 @@ dist/
 /themes/z/css/*.css.map
 .clj-kondo/
 .lsp/
+node_modules/
