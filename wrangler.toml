@@ -2,6 +2,8 @@ name = "my-blog"
 main = "src/index.ts"
 compatibility_date = "2023-03-03"
 
+account_id = 'fa090cda6cb5cc39f3125664cf499831'
+
 [site]
 bucket = "./public"
 
