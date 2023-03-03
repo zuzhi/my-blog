@@ -48,6 +48,9 @@ jobs:
       # Lein run
       - name: Run
         run: lein run
+      # Run npm install, for @cloudflare/kv-asset-handler
+      - name: Run npm install
+        run: npm install
       # Publish
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
