@@ -1,0 +1,20 @@
+#image-container {
+  overflow: hidden;
+}
+
+#image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#replay-link {
+  display: none;
+  margin-top: 10px;
+  color: #007acc;
+  text-decoration: none;
+}
+
+#replay-link:hover {
+  text-decoration: underline;
+}

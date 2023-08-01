@@ -12,4 +12,4 @@ and deployed using [cloudflare workers](https://developers.cloudflare.com/worker
 
 ## github actions
 
-by [github actions](https://github.com/zuzhi/my-blog/blob/main/.github/workflows/main.yml)
+through [github actions](https://github.com/zuzhi/my-blog/blob/main/.github/workflows/main.yml)

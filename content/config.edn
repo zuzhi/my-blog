@@ -14,18 +14,18 @@
  :rss-filters                  ["cryogen"]
  :recent-posts                 3
  :post-date-format             "yyyy-MM-dd"
- :archive-group-format         "yyyy MMMM"
+ :archive-group-format         "yyyyMM"
  :sass-src                     []
  :sass-path                    "sass"
  :theme                        "pico"
- :resources                    ["img"]
+ :resources                    ["img", "js", "css"]
  :keep-files                   [".git"]
  :disqus?                      false
  :disqus-shortname             ""
  :ignored-files                [#"\.#.*" #".*\.swp$"]
- :previews?                    true
- :posts-per-page               10000
- :blocks-per-preview           0
+ :previews?                    false
+ :posts-per-page               1
+ :blocks-per-preview           2
  :clean-urls                   :dirty
  :collapse-subdirs?            false
  :hide-future-posts?           true

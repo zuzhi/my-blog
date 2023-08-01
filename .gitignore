@@ -20,3 +20,4 @@ dist/
 .clj-kondo/
 .lsp/
 node_modules/
+.DS_Store

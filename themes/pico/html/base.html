@@ -18,6 +18,14 @@
         {% style "css/blog.css" %}
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/nord.min.css"/>
+        {% if post.js %}
+        <link rel=stylesheet"
+              href="../../css/{{post.slug}}/{{post.slug}}.css"/>
+        {% endif %}
+        <!-- loop through external-css, add link elements -->
+        {% for css in post.external-css %}
+        <link rel="stylesheet" href="{{css}}">
+        {% endfor %}
     </head>
     <body>
         <header class="container">
@@ -36,6 +44,9 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/clojure.min.js"></script>
         <script>hljs.highlightAll();</script>
+        {% if post.js %}
+        <script src="../../js/{{post.slug}}/{{post.slug}}.js"></script>
+        {% endif %}
 
         {% if post.klipse %} {{post.klipse|safe}} {% endif %}
         {% if page.klipse %} {{page.klipse|safe}} {% endif %}
