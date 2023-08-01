@@ -80,8 +80,12 @@ h4 > #home {
   color: grey;
 }
 
+header a {
+  margin-right: 5px;
+}
+
 header a:not(:first-child) {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 p {

@@ -1,4 +1,4 @@
-{:title "TIL"
+{:title "Today I Learned"
  :page-index 0}
 
 ## 2023-07-31
