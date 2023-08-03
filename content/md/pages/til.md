@@ -1,6 +1,28 @@
 {:title "Today I Learned"
  :page-index 0}
 
+## 2023-08-03
+
+使用 jq 给 json 文件增加字段
+
+superset 前端部分的文档里讲, 如果你要取消 Scarf 的 telemetry 可以在 package.json 添加如下配置
+
+```json
+{
+  // ...
+  "scarfSettings": {
+    "enabled": false
+  }
+  // ...
+}
+```
+
+如果我想不打开文件直接在命令行完成增加字段的操作的话, 研究了一下可以用下面的命令
+
+```bash
+cat package.json | jq '.scarfSettings += {"enabled": false}' | tee package.json
+```
+
 ## 2023-07-31
 
 使用苹果自带的英文输入法无法使用键重复, 原因是按住键盘上的某个字母键，会显示[重音符菜单](https://support.apple.com/zh-cn/guide/mac-help/mh27474/mac)。可以使用下面的命令将其关闭:
