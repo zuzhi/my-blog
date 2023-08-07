@@ -20,7 +20,16 @@ hljs.registerLanguage('srt', function (hljs) {
   };
 });
 
+function preload_image(img_url) {
+  let img = new Image();
+  img.src = img_url;
+}
+
 const images = ["hubble-1.png", "hubble-2.png", "hubble-3.png", "hubble-4.png", "hubble-5.png", "hubble-6.png", "hubble-7.png", "hubble-8.png", "hubble-9.png"];
+for (image of images) {
+  preload_image("../../img/hubble/" + image);
+}
+
 let currentImageIndex = 0;
 const imageElement = document.querySelector("#image-container img");
 const replayButton = document.querySelector("#replay-link");
