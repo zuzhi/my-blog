@@ -1,6 +1,28 @@
 {:title "Today I Learned"
  :page-index 0}
 
+## 2023-08-10
+
+可选链运算符 (?.) (Optional chaining) 允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。在引用为空 (nullish) (null 或者 undefined) 的情况下不会引起错误，该表达式短路返回值是 undefined。
+
+该运算符还可以与*函数*调用一起使用，如果给定的函数不存在，则返回 undefined。
+
+```js
+const adventurer = {
+  name: 'Alice',
+  cat: {
+    name: 'Dinah',
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
+
 ## 2023-08-03
 
 使用 jq 给 json 文件增加字段
