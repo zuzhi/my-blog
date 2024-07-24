@@ -8,7 +8,7 @@ is created using [cryogen](https://github.com/cryogen-project/cryogen)
 
 ## cloudflare workers
 
-and deployed using [cloudflare workers](https://developers.cloudflare.com/workers/platform/sites/start-from-existing/)
+and is deployed using [cloudflare workers](https://developers.cloudflare.com/workers/platform/sites/start-from-existing/)
 
 ## github actions
 
