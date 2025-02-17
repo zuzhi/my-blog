@@ -1,5 +1,19 @@
 {:title "Today I Learned"
  :page-index 0}
+ 
+## 2025-01-15
+
+`SPC t w`: Soft line wrapping
+
+`sql mode` -> sql postgres -> literate programming
+ 
+## 2024-10-08
+
+`SPC t c`: Fill Column Indicator 
+ 
+## 2024-10-06
+
+query-replace
 
 ## 2024-07-25
 

@@ -13,3 +13,7 @@ and is deployed using [cloudflare workers](https://developers.cloudflare.com/wor
 ## github actions
 
 through [github actions](https://github.com/zuzhi/my-blog/blob/main/.github/workflows/main.yml)
+
+## run dev
+
+with `lein serve`

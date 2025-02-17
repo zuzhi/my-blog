@@ -1,9 +1,9 @@
 <h1>
     {{post.title}}
-    {% if post.draft %}
-    <small>(Draft)</small>
-    {% endif %}
 </h1>
+{% if post.draft %}
+<small>(still a draft)</small>
+{% endif %}
 {% if post.toc %}{{post.toc|safe}}{% endif %}
 {{post.content|safe}}
 <br/>
