@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: '14'
+          node-version: '20'
       # Install Sass
       - name: Install Sass
         run: npm install -g sass
