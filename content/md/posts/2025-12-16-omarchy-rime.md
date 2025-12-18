@@ -26,21 +26,30 @@ Omarchy 默认安装了 Fcitx5，也就是输入法框架，但是 Fcitx5 只是
 
 ### 设置简体字
 
-直接使用的话，你會發現輸入的是繁體字，使用快捷鍵 `Ctrl+`` 可以調起方案选单，可以改为简体字。
+直接使用的话，你會發現輸入的是繁體字，使用快捷鍵 `Ctrl+`` 可以調起方案选单，选择简体字。
+
+当然也可以通过写入配置文件来实现，在 Rime 的用户目录也就是配置目录下新建一个 `default.custom.yaml` 的文件，填写如下内容：
+
+```yaml
+patch:
+  schema_list:
+    - schema: luna_pinyin_simp # 明月拼音简体字
+```
 
 ### 双拼
 
 我在 macOS 里使用系统自带的简体双拼，习惯使用双拼之后就不想/不能用回全拼了，一方面是在熟练的情况下，双拼会更高效，敲击更少的按键的感觉很好，另一方面是习惯双拼之后，全拼的技能会退化😂️，会不自觉的按照双拼来敲。
 
-双拼需要安装 `rime-double-pinyin`，然后在 `~/.local/share/fcitx5/rime` 目录下，新建一个 `default.custom.yaml` 文件，填写如下内容：
+双拼需要安装 `rime-double-pinyin`，然后在 `default.custom.yaml` 文件里增加双拼方案，内容如下：
 
 ```yaml
 patch:
   schema_list:
-    - schema: double_pinyin_mspy
+    - schema: luna_pinyin_simp
+    - schema: double_pinyin_mspy # 微软双拼
 ```
 
-然后重启一下 Fcitx5（通过系统托盘里的键盘图标右键菜单里的 Restart ）就可以了。
+重启 Fcitx5（通过系统托盘里的键盘图标右键菜单里的 Restart ）之后，通过 `Ctrl+``从方案选单中选择双拼即可。
 
 ### Emoji
 
